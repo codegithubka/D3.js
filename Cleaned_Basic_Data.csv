@@ -1,0 +1,15 @@
+Team,Topic,Leader,Number of Members,Focus,Relations to other teams,Leader Gender
+DICE,Document Intelligence,I. Zavitsanos,4,"ML, NLP, knowledge graphs - AI in bunsiness & finance","ML, NLP, graphs",Male
+MagCIL,Multimedia Analysis,T. Giannakopoulos,14,"Speech Analytics and recognition, multimodal fusion, ML - Music Iinformation retrieval","Robotics, LNP, ML",Male
+BioHIT,Biomedical Health Informatics,A. Krithara,7,"ML, data mining, knowledge representation and visulalization - AiI in Life Sciences","ML, NLP, graphs - biomedical",Female
+CAKT,Content and Analysis and Knowledge Technologies,G. Petasis,5,"NLP, LLMs, Knowledge Representation, ML - AI applications (disinformation, culture)","ML, NLP - Ethics",Female
+CER,Complex Event Recognition,A. Artikis,12,"Complex event recognition, knowledge representation, reasoning under uncertainty, ML for automata and temporal logics, neurosymbolic learning - Big streaming data","ML, Knowledge Representation - biomedical applications, big data streams",Male
+DIA,Document Image Analysis,B. Gatos,5,"Document image processing & recogntition - historical handwritten documents, text on video",NLP - AI in culture,Male
+KMU,Knowledge Management Unit,O. Papadopoulos,6,"Applications in healthcare, quantum techonologies",biomedical applications,Male
+RoboSKEL,Robotics,M. Dagioglou,2,"Socially-aware robotics, reinforcement learning","Knowledge Represenation, ML - Ethics",Female
+AI Politeia,AI Ethics,X. Zouvelou,4,"Trustworthy, Ethical, democratic AI - Social and Policy aspects of AI",Potential link to all teams at higher level,Female
+ARTIFACT,AI in culture,L. Arnellou,8,AI & Technology for culture,"Knowledge Represenation,Speech and NLP, ML - Ethics",Female
+INSANE,AI in Natural Sciences,G. Giannakopoulos,5,AI in Natural Sciences and Engineering,"NLP , ML - Medical and Science applications",Male
+ID-IS,Intellgient Data-Intensive Systems,I. Klampanos,6,Deep learning and interpretability - Knowledge representationa and information fusion - AI in Natural Sciences,"ML, Knowledge Representation - Science applications",Male
+DEG,Data Engineering Group,S. Konstantopoulos,2,Knowledge representation and information fusion,"ML, Knowledge Representation",Male
+ISL,Integrated Systems,D. Kyriazanos,10,AI for physical and cyber security - AI ethics,"Knowledge Representation, ML - Ethics",Male
