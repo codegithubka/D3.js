@@ -1,0 +1,14 @@
+Team,DICE,MagICL,BioHIT,CAKT,CER,DIA,KMU,RoboSKEL,AI Politeia,ARTIFACT,INSANE,ID-IS,DEG,ISL
+Security,No,No,No,No,Yes,No,Yes,No,Yes,No,No,No,No,Yes
+Humanities,No,Yes,No,Yes,No,Yes,No,Yes,Yes,Yes,No,No,No,Yes
+Nat. Sci,No,No,No,No,No,No,Yes,No,No,No,Yes,Yes,No,
+Health,No,Yes,Yes,No,Yes,No,No,No,No,No,Yes,No,Yes,
+AI Ethics,No,No,No,Yes,No,No,No,Yes,Yes,Yes,No,No,No,Yes
+Big Data,Yes,Yes,Yes,Yes,Yes,No,No,No,Yes,No,Yes,Yes,Yes,No
+Robotics,No,No,No,No,No,Yes,No,Yes,No,No,No,No,No,No
+Documents,Yes,No,No,Yes,No,No,No,No,No,No,No,No,No,No
+Multimedia,No,No,No,No,No,No,No,No,No,Yes,No,No,No,No
+NLP,Yes,Yes,Yes,Yes,No,Yes,Yes,No,No,No,Yes,No,No,No
+KRR,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,No,Yes,Yes,Yes,Yes,Yes
+Graphs,Yes,Yes,Yes,No,Yes,No,No,No,No,No,Yes,No,No,No
+DL/ML,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,No,Yes,Yes,Yes,Yes
