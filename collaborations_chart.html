@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Industrial Collaborations Visualization</title>
+    <style>
+        .tooltip {
+            position: absolute;
+            text-align: center;
+            width: 150px;
+            padding: 5px;
+            font: 12px sans-serif;
+            background: lightsteelblue;
+            border: 0px;
+            border-radius: 8px;
+            pointer-events: none;
+        }
+        .bar {
+            stroke: black;
+            stroke-width: 1px;
+        }
+        text {
+            font-family: sans-serif;
+            font-size: 12px;
+            text-anchor: middle;
+        }
+        .y-axis text {
+            text-anchor: end;
+        }
+    </style>
+</head>
+<body>
+    <h1>Industrial Collaborations Visualization</h1>
+    <div>
+        <label for="collaborationFilter">Select Collaboration Level:</label>
+        <select id="collaborationFilter">
+            <option value="All">All</option>
+            <option value="Strong">Strong</option>
+            <option value="Good">Good</option>
+            <option value="Trying">Trying</option>
+            <option value="No interest">Not Interested</option>
+        </select>
+    </div>
+    <div id="chart"></div>
+    <div class="tooltip" style="opacity:0;"></div>
+
+    <!-- D3.js Library -->
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="collaborations_script.js"></script>
+</body>
+</html>
