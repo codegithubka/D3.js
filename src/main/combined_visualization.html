@@ -5,25 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Research Teams Visualizations</title>
     <style>
+        body {
+            background-color: #121212;
+            color: #e0e0e0;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            text-align: center;
+            color: #bb86fc;
+        }
         .tooltip {
             position: absolute;
             text-align: center;
             width: 150px;
             padding: 5px;
             font: 12px sans-serif;
-            background: lightsteelblue;
-            border: 0px;
+            background: rgba(33, 33, 33, 0.9);
+            border: 1px solid #bb86fc;
             border-radius: 8px;
             pointer-events: none;
+            color: #e0e0e0;
         }
         .bar {
-            stroke: black;
+            stroke: #121212;
             stroke-width: 1px;
-        }
-        text {
-            font-family: sans-serif;
-            font-size: 12px;
-            text-anchor: middle;
         }
         .y-axis text {
             text-anchor: end;
@@ -36,6 +41,40 @@
             stroke: #999;
             stroke-opacity: 0.6;
         }
+        text {
+            font-family: sans-serif;
+            font-size: 12px;
+            fill: #e0e0e0;
+        }
+        .chart-title {
+            color: #bb86fc;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .filter-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .filter-container label,
+        .filter-container select {
+            color: #e0e0e0;
+        }
+        .button-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .button-container button {
+            margin: 0 5px;
+            padding: 10px 20px;
+            background-color: #bb86fc;
+            border: none;
+            color: #121212;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .button-container button:hover {
+            background-color: #3700b3;
+        }
     </style>
     <!-- D3.js Library -->
     <script src="https://d3js.org/d3.v7.min.js"></script>
@@ -43,11 +82,17 @@
 <body>
     <h1>Research Teams Visualization</h1>
 
-    <div id="leader_chart"></div>
-    <div id="team_connections_chart"></div>
-    <div id="collaborations_chart"></div>
+    <div id="leader_chart">
+        <h2 class="chart-title">Leader Teams Visualization</h2>
+    </div>
+    <div id="team_connections_chart">
+        <h2 class="chart-title">Team Connections Network</h2>
+    </div>
+    <div id="collaborations_chart">
+        <h2 class="chart-title">Industrial Collaborations Visualization</h2>
+    </div>
 
-    <div>
+    <div class="filter-container">
         <label for="collaborationFilter">Select Collaboration Level:</label>
         <select id="collaborationFilter">
             <option value="All">All</option>
@@ -58,6 +103,12 @@
         </select>
     </div>
     <div class="tooltip" style="opacity:0;"></div>
+
+    <div class="button-container">
+        <button id="showAll">Show All</button>
+        <button id="showMale">Show Male Leaders</button>
+        <button id="showFemale">Show Female Leaders</button>
+    </div>
 
     <script>
         // Leader Script
@@ -129,7 +180,7 @@
                     .attr("y", d => y(+d['Number of Members']))
                     .attr("width", x.bandwidth())
                     .attr("height", d => height - y(+d['Number of Members']))
-                    .attr("fill", "#69b3a2");
+                    .attr("fill", "#bb86fc");
 
                 // Enter new elements
                 bars.enter()
@@ -138,7 +189,7 @@
                     .attr("y", height)
                     .attr("width", x.bandwidth())
                     .attr("height", 0)
-                    .attr("fill", "#69b3a2")
+                    .attr("fill", "#bb86fc")
                     .on("mouseover", (event, d) => {
                         tooltip.transition()
                                .duration(200)
@@ -162,20 +213,9 @@
             updateChart();
 
             // Add buttons for filtering by gender
-            d3.select("body")
-              .append("button")
-              .text("Show All")
-              .on("click", () => updateChart());
-
-            d3.select("body")
-              .append("button")
-              .text("Show Male Leaders")
-              .on("click", () => updateChart("Male"));
-
-            d3.select("body")
-              .append("button")
-              .text("Show Female Leaders")
-              .on("click", () => updateChart("Female"));
+            d3.select("#showAll").on("click", () => updateChart());
+            d3.select("#showMale").on("click", () => updateChart("Male"));
+            d3.select("#showFemale").on("click", () => updateChart("Female"));
         });
 
         // Team Connections Script
@@ -204,8 +244,8 @@
             const nodesArray = Array.from(nodesMap.values());
 
             // Create the graph
-            const width = 800;
-            const height = 600;
+            const width = 1500;
+            const height = 1000;
 
             const svg = d3.select("#team_connections_chart").append("svg")
                 .attr("width", width)
@@ -225,7 +265,9 @@
                 .selectAll("line")
                 .data(links)
                 .enter().append("line")
-                .attr("class", "link");
+                .attr("class", "link")
+                .style("stroke", "#bb86fc")
+                .style("stroke-opacity", 0.6);
 
             const node = svg.append("g")
                 .attr("class", "nodes")
@@ -234,7 +276,7 @@
                 .enter().append("circle")
                 .attr("class", "node")
                 .attr("r", 8)
-                .style("fill", d => d.type === 'team' ? 'blue' : 'green')
+                .style("fill", d => d.type === 'team' ? '#03DAC6' : '#CF6679')
                 .on("mouseover", function(event, d) {
                     tooltip.style("display", "block")
                            .html(`ID: ${d.id}<br>Type: ${d.type}`);
