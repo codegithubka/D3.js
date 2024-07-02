@@ -31,7 +31,7 @@ The project includes the following visualizations:
 1. Clone the repository to your local machine:
 
     ```bash
-    git clone https://github.com/your-username/research-teams-visualization.git
+    git clone https://github.com/codegithubka/research-teams-visualization.git
     cd research-teams-visualization
     ```
 
